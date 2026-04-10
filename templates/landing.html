@@ -25,7 +25,7 @@
                     <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 1 1 0-2h6V1a1 1 0 0 1 1-1z"/>
                 </svg>
             </a>
-            <a href="#how-it-works" class="btn-dark">See how it works</a>
+            <button type="button" class="btn-dark" data-modal-trigger="how-it-works-modal">See how it works</button>
         </div>
         <div class="hero-visual">
             <div class="dashboard-card">
@@ -105,5 +105,29 @@
         <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
     </div>
 </section>
+
+<!-- How It Works Modal -->
+<div class="modal-overlay" id="how-it-works-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+        <button type="button" class="modal-close" aria-label="Close modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title" id="modal-title">How Spendly Works</h2>
+            <div class="modal-video">
+                <iframe
+                    id="modal-youtube"
+                    src=""
+                    title="How Spendly Works"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
